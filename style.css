@@ -1,0 +1,132 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Search Container */
+.search-container {
+    margin: 20px 0;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Weather Display */
+#weatherDisplay {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 300px;
+    text-align: left;
+}
+
+#weatherDisplay h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#weatherDisplay p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Forecast Display */
+#forecastDisplay {
+    margin-top: 40px;
+}
+
+#forecastContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.forecast-card {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-card p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    #searchBox {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 200px;
+    }
+
+    #weatherDisplay {
+        max-width: 90%;
+    }
+
+    .forecast-card {
+        width: 120px;
+    }
+}
