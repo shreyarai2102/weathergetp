@@ -1,4 +1,4 @@
-const apiKey = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
+const apiKey = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={5a98159efce1b660f3bc115743e17aee}";
  
 
 async function searchWeather() {
@@ -10,7 +10,7 @@ async function searchWeather() {
 
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${state},IN&units=metric&appid=${apiKey}`
+            `https://api.openweathermap.org/data/2.5/weather?q=${state},IN&units=metric&appid=${5a98159efce1b660f3bc115743e17aee}`
         );
         const data = await response.json();
 
@@ -36,7 +36,7 @@ async function searchWeather() {
 async function fetchForecast(lat, lon) {
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${5a98159efce1b660f3bc115743e17aee}`
         );
         const forecastData = await response.json();
 
