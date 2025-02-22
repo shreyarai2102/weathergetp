@@ -1,4 +1,5 @@
-const apiKey = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}; // Replace with your OpenWeather API Key
+const apiKey = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
+ 
 
 async function searchWeather() {
     const state = document.getElementById("searchBox").value.trim();
@@ -23,6 +24,7 @@ async function searchWeather() {
         document.getElementById("humidity").innerText = `Humidity: ${data.main.humidity}%`;
         document.getElementById("windSpeed").innerText = `Wind Speed: ${data.wind.speed} m/s`;
         document.getElementById("weatherCondition").innerText = `Condition: ${data.weather[0].description}`;
+        document.getElementById("weatherDisplay").style.display = "block";
 
         fetchForecast(data.coord.lat, data.coord.lon);
     } catch (error) {
@@ -65,3 +67,4 @@ async function fetchForecast(lat, lon) {
         console.error(error);
     }
 }
+
