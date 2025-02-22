@@ -1,4 +1,4 @@
-const apiKey = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={5a98159efce1b660f3bc115743e17aee}";
+const apiKey = "5a98159efce1b660f3bc115743e17aee";
  
 
 async function searchWeather() {
