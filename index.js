@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY"; // Replace with your OpenWeather API Key
+const apiKey = https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}; // Replace with your OpenWeather API Key
 
 async function searchWeather() {
     const state = document.getElementById("searchBox").value.trim();
