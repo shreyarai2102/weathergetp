@@ -31,6 +31,41 @@
         <div id="forecastContainer"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const apiKey = "5a98159efce1b660f3bc115743e17aee";
+
+        async function searchWeather() {
+            const state = document.getElementById("searchBox").value.trim();
+            if (state === "") {
+                alert("Please enter a valid Indian state name!");
+                return;
+            }
+
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state},IN&units=metric&appid=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.cod !== 200) {
+                    alert("Invalid state name or data unavailable!");
+                    return;
+                }
+
+                document.getElementById("stateName").innerText = `Weather in ${data.name}`;
+                document.getElementById("currentTemperature").innerText = `Temperature: ${data.main.temp}°C`;
+                document.getElementById("humidity").innerText = `Humidity: ${data.main.humidity}%`;
+                document.getElementById("windSpeed").innerText = `Wind Speed: ${data.wind.speed} m/s`;
+                document.getElementById("weatherCondition").innerText = `Condition: ${data.weather[0].description}`;
+
+                document.getElementById("weatherDisplay").style.display = "block";
+            } catch (error) {
+                alert("An error occurred! Please try again.");
+                console.error(error);
+            }
+        }
+    </script>
+
 </body>
 </html>
+l>
